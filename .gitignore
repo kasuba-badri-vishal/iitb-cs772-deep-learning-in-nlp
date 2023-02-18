@@ -1,3 +1,9 @@
+# Ignore DS_Store
+*.DS_Store
+
+# Ignore Idea
+*.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

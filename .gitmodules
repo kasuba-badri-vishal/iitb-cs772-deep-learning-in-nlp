@@ -1,0 +1,3 @@
+[submodule "submodules/doctr"]
+	path = submodules/doctr
+	url = https://github.com/mindee/doctr.git
