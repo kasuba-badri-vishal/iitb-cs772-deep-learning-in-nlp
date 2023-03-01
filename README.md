@@ -23,7 +23,39 @@ Project Work of Creation of efficient software system which reads documents and 
 6. Results, Analaysis     : 05th April
 
 
+## PROPOSED IDEA :-
+1. OCR+MT+(Summary in Translated language)
+2. OCR+MT+(TTS in Translated language)
+3. OCR+MT+(TTS in original language)
+4. OCR+MT+(layout preservation in translated language) 
+
+
+## Datasets :-
+1. Docbank(OCR)
+2. CFILT dataset(MT, 3GB, Eng-Hin) (https://www.cfilt.iitb.ac.in/iitb_parallel/)
+3. Summarization,TTS,layout preservation (pretrained models)
+
+## Things we discussed
+
+1. Agenda
+2. Time Allocation based on priority
+   1.30% OCR (TD - 3, TR - 2)
+   2.60% MT (3-4 papers)
+   3.10% TTS ( pretrained models) (2)
+
+4. Why we are doing
+
+
+
+If managable, we will implement Speech(if time permits)
+training model we wont do in speech, if time permits implement speech
+
+
+## Links to Slides, Presentation
+
 ## References
 
-1. [Udaan](https://udaanproject.org/)
+1. [Udaan](https://udaanproject.org/) - OCR to MT
 2. [cfilt-ssmt](https://www.cfilt.iitb.ac.in/ssmt/speech2speech)
+3. [OCR to TTS](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9697030)
+4. [OCR to MT](https://arxiv.org/abs/1910.05535)
