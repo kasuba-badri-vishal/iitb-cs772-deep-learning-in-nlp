@@ -34,6 +34,7 @@ Project Work of Creation of efficient software system which reads documents and 
 1. Docbank(OCR)
 2. CFILT dataset(MT, 3GB, Eng-Hin) (https://www.cfilt.iitb.ac.in/iitb_parallel/)
 3. Summarization,TTS,layout preservation (pretrained models)
+4. dataset for CFLIT(MT(eng to hindi)) - https://drive.google.com/drive/folders/1W1VJr3uzFuFi_49ZbpfeHiIOb_z-EugH?usp=share_link  
 
 ## Things we discussed
 
