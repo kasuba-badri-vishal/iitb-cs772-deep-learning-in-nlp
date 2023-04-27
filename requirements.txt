@@ -21,3 +21,5 @@ setuptools~=66.1.1
 psutil~=5.9.4
 pandas~=1.5.3
 pytesseract
+transformers
+sentencepiece
