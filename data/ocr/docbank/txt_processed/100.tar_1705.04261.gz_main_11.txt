@@ -132,9 +132,3 @@ MNRAS 1242 2212 1328 2233 0 0 0 UFZJOE+CMR8 paragraph
 000, 1336 2212 1384 2233 0 0 0 ECMFEV+CMBX8 paragraph
 1–16 1391 2212 1438 2233 0 0 255 UFZJOE+CMR8 paragraph
 (2017) 1447 2212 1511 2233 0 0 0 UFZJOE+CMR8 paragraph
-##LTFigure## 125 278 810 785 0 0 0 default figure
-##LTFigure## 818 278 1501 785 0 0 0 default figure
-##LTFigure## 122 788 805 1293 0 0 0 default figure
-##LTFigure## 813 788 1498 1293 0 0 0 default figure
-##LTFigure## 122 1501 805 2006 0 0 0 default figure
-##LTFigure## 813 1501 1498 2006 0 0 0 default figure

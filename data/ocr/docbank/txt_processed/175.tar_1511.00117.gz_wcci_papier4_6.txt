@@ -700,11 +700,3 @@ A, 914 2010 935 2039 0 0 0 XHAKNF+NimbusRomNo9L-Regu reference
 – 1048 2010 1059 2039 0 0 0 XHAKNF+NimbusRomNo9L-Regu reference
 435, 1067 2010 1105 2039 0 0 0 XHAKNF+NimbusRomNo9L-Regu reference
 1997. 1113 2010 1162 2039 0 0 0 XHAKNF+NimbusRomNo9L-Regu reference
-##LTFigure## 185 151 479 446 0 0 0 default figure
-##LTFigure## 185 151 479 446 0 0 0 default figure
-##LTFigure## 489 151 783 446 0 0 0 default figure
-##LTFigure## 489 151 783 446 0 0 0 default figure
-##LTFigure## 227 1212 479 1465 0 0 0 default figure
-##LTFigure## 227 1212 479 1465 0 0 0 default figure
-##LTFigure## 489 1212 741 1465 0 0 0 default figure
-##LTFigure## 489 1212 741 1465 0 0 0 default figure

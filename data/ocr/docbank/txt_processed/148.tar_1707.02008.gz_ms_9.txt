@@ -36,4 +36,3 @@ for 360 2013 387 2041 0 0 0 MMBTZX+NimbusRomNo9L-Regu caption
 U 392 2013 408 2041 0 0 0 MMBTZX+NimbusRomNo9L-Regu caption
 Stokes 413 2013 472 2041 0 0 0 MMBTZX+NimbusRomNo9L-Regu caption
 parameter. 477 2013 571 2041 0 0 0 MMBTZX+NimbusRomNo9L-Regu caption
-##LTFigure## 139 171 1499 1980 0 0 0 default figure

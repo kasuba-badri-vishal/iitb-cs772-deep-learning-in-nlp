@@ -526,13 +526,4 @@ M−. 899 1911 952 1944 0 0 0 MGLMOI+CMMI10 paragraph
 t 714 1925 720 1944 0 0 0 GYFQJW+CMMI7 paragraph
 + 780 1925 797 1944 0 0 0 KEHTPR+CMR7 paragraph
 t 858 1925 867 1944 0 0 0 GYFQJW+CMMI7 paragraph
-##LTFigure## 387 356 914 673 0 0 0 default figure
-##LTFigure## 387 567 453 616 0 0 0 default figure
-##LTFigure## 544 358 610 400 0 0 0 default figure
-##LTFigure## 875 400 911 444 0 0 0 default figure
-##LTFigure## 878 517 909 561 0 0 0 default figure
-##LTFigure## 880 640 906 675 0 0 0 default figure
-##LTFigure## 943 338 1310 673 0 0 0 default figure
-##LTFigure## 992 338 1040 371 0 0 0 default figure
-##LTFigure## 1212 341 1259 371 0 0 0 default figure
 ##LTLine## 1127 380 1127 673 0 0 0 default paragraph
