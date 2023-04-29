@@ -143,7 +143,8 @@ if __name__ =="__main__":
     print("\n")
     print(output)
 
-    file1 = open("myfile.txt","w")
+    file = Path(args.data).stem
+    file1 = open("./results/outputs/"+ file+'.txt',"w")
     
     file1.write(output)
     file1.close() #to
@@ -160,7 +161,7 @@ if __name__ =="__main__":
     draw = ImageDraw.Draw(blank_image)
     draw.text((10, 10), output, font=font, fill=(255, 0, 0))
     cv2_image = cv2.cvtColor(np.array(blank_image), cv2.COLOR_RGB2BGR)
-    file = Path(args.data).stem
+    
     cv2.imwrite("./results/outputs/"+ file+'.jpg', cv2_image)
 
     print("Done")
