@@ -1,10 +1,7 @@
 all: setup run
 
 run: venv/bin/activate
-	./venv/bin/python3 main.py
-
-webapp: venv/bin/activate
-	./venv/bin/python3 app.py
+	./venv/bin/python3 src/pipeline.py
 
 setup: requirements.txt
 	virtualenv venv

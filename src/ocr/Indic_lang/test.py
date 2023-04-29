@@ -21,7 +21,7 @@ def store_image_results(directory, predictions):
         image = cv2.imread(src_dir + file)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(image)
-        font = ImageFont.truetype('convincing_directory/font.ttf', size=40, encoding='unic')
+        font = ImageFont.truetype('./data/font.ttf', size=40, encoding='unic')
         draw = ImageDraw.Draw(pil_image)
         draw.text((10, 10), predictions[file], font=font, fill=(255, 0, 0))
         cv2_image = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
