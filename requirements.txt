@@ -29,3 +29,4 @@ fastwer
 jupyter
 wandb
 fastprogress
+nltk
