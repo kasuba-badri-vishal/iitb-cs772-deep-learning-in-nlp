@@ -6,8 +6,11 @@ import torch
 from PIL import ImageFont, ImageDraw, Image
 import cv2
 import numpy as np
+from pathlib import Path
+
 
 import os
+import re
 import argparse
 import warnings
 import pickle
@@ -28,6 +31,18 @@ def get_command():
 
 
 def preprocess_data(data):
+
+    brac_text_pattern = r"[\(\[].*?[\)\]]"
+    brac_pattern = r'[()\[\]{}]'
+    eqn_pattern = r'\b[\w\.\-]+\s*[+\-\.]\s*[\w\.\-]+\s*=\s*[\w\.\-]+\b'
+    space_pattern = r'[/\s]{2,}'
+
+    data = data.replace("- ", "")
+    data = re.sub(brac_text_pattern, "", data)
+    data = re.sub(brac_pattern, '', data)
+    data = re.sub(eqn_pattern, "", data, 0, re.MULTILINE)
+    data = re.sub(space_pattern, ' ', data)
+
     return data
 
 
@@ -77,11 +92,13 @@ def get_ocr_output(args):
 
         result = model(doc)
 
-        with open('results/test_ocr_3.pkl', 'wb') as outp:  # Overwrites any existing file.
+        file = Path(args.data).stem
+
+        with open('results/int_ocr/' + file + '.pkl', 'wb') as outp:  # Overwrites any existing file.
             pickle.dump(result, outp, pickle.HIGHEST_PROTOCOL)
 
     else:
-         with open('results/test_ocr_3.pkl', 'rb') as f:
+         with open('results/int_ocr/' + file + '.pkl', 'rb') as f:
             result = pickle.load(f)
 
 
@@ -143,7 +160,8 @@ if __name__ =="__main__":
     draw = ImageDraw.Draw(blank_image)
     draw.text((10, 10), output, font=font, fill=(255, 0, 0))
     cv2_image = cv2.cvtColor(np.array(blank_image), cv2.COLOR_RGB2BGR)
-    cv2.imwrite("temp.jpg", cv2_image)
+    file = Path(args.data).stem
+    cv2.imwrite("./results/outputs/"+ file+'.jpg', cv2_image)
 
     print("Done")
     
