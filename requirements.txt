@@ -27,3 +27,5 @@ sentencepiece
 pybind11
 fastwer
 jupyter
+wandb
+fastprogress
