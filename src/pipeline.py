@@ -87,7 +87,7 @@ def get_summary(data):
     tokenizer = AutoTokenizer.from_pretrained(SUMMARIZATION_MODEL)
     model = PegasusForConditionalGeneration.from_pretrained(SUMMARIZATION_MODEL).to(device)
     batch = tokenizer(data, truncation=True, padding='longest', return_tensors="pt").to(device)
-    translated = model.generate(**batch, max_new_tokens=MAX_VALUE)
+    translated = model.generate(**batch, max_new_tokens=MAX_VALUE_SUMM)
     summary_text = tokenizer.batch_decode(translated, skip_special_tokens=True)
     return summary_text
 
@@ -131,7 +131,7 @@ def machine_translation(data):
         tokenizer = AutoTokenizer.from_pretrained(TRANSLATION_MODEL, src_lang="eng_Latn", tgt_lang="hin_Deva")
         model = AutoModelForSeq2SeqLM.from_pretrained(TRANSLATION_MODEL)
         translator = pipeline('translation', model=model, tokenizer=tokenizer,src_lang="eng_Latn", tgt_lang="hin_Deva",device=device) 
-        output = translator(eng_text,max_length=MAX_VALUE)
+        output = translator(eng_text,max_length=MAX_VALUE_TRAN)
         result += output[0]['translation_text'] + "\n"
 
     return result

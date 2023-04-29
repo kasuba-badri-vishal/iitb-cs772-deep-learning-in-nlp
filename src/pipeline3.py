@@ -345,8 +345,5 @@ for eng_text in lines:
 
 file = Path(sys.argv[1]).stem
 file1 = open("./results/translation2/"+ file+'.txt',"w")
-
-# result = ''.join(result)
-
 file1.write(result)
-file1.close() #to
+file1.close() 

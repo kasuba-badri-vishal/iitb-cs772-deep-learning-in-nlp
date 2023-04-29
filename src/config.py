@@ -22,6 +22,6 @@ SUMMARIZATION_MODEL = 'google/pegasus-cnn_dailymail'
 TRANSLATION_MODEL = 'facebook/nllb-200-distilled-600M'
 
 
-# MAX_VALUE = 65536
-MAX_VALUE = 8192
+MAX_VALUE_SUMM = 65536
+MAX_VALUE_TRAN = 8192
 
