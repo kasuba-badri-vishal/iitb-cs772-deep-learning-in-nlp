@@ -22,7 +22,7 @@ def store_image_results(directory, predictions):
         image = cv2.imread(src_dir + file)
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         pil_image = Image.fromarray(image)
-        font = ImageFont.truetype('./data/font.ttf', size=40, encoding='unic')
+        font = ImageFont.truetype('./convincingDirectory/font.ttf', size=40, encoding='unic')
         draw = ImageDraw.Draw(pil_image)
         draw.text((10, 10), predictions[file], font=font, fill=(255, 0, 0))
         cv2_image = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
@@ -74,7 +74,7 @@ if __name__ == "__main__":
         json.dump(predictions, f, ensure_ascii=False, indent=4)
         
     ### Run the test example on sample data and get predictions
-    command = ["python", "./doctr/references/recognition/train_pytorch.py", ARCH, "--train_path", TRAIN_PATH + LANGUAGE + "/", "--epochs", str(1), "--device", str(0),  "-b", str(1),  "--test-only",
+    command = ["python", "./doctr/references/recognition/train_pytorch.py", ARCH, "--train_path", TRAIN_PATH + LANGUAGE + "/trainset/", "--epochs", str(1),  "-b", str(1),  "--test-only",
                "--val_path", args.data, "--vocab", args.lang, "--resume", args.model]
     
     subprocess.run(command)

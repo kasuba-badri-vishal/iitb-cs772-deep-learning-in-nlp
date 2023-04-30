@@ -1,4 +1,4 @@
-TRAIN_PATH      =  "/data/BADRI/IHTR/trainset/"
+TRAIN_PATH      =  "./../data/IHTR/"
 VALIDATION_PATH = "/data/BADRI/IHTR/validationset_small/"
 TEST_PATH       = "/data/BADRI/IHTR/testset_small/"
 MODELS_PATH     = "./models/"
@@ -23,5 +23,5 @@ TRANSLATION_MODEL = 'facebook/nllb-200-distilled-600M'
 
 
 MAX_VALUE_SUMM = 65536
-MAX_VALUE_TRAN = 8192
+MAX_VALUE_TRAN = 4096
 

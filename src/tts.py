@@ -44,6 +44,14 @@ def get_speech(file, data):
     shutil.move('temp.wav', './results/speech2/' + file + '.wav')
 
 
+with open(sys.argv[1]) as f:
+    lines = f.readlines()
+
+
+output = ""
+for line in lines:
+    output += line + " "
+
 
 file = Path(sys.argv[1]).stem
-get_speech(file, sys.argv[1])
+get_speech(file, output)
