@@ -9,8 +9,11 @@ import argparse
 import warnings
 import pickle
 import shutil
+import json
+import os
 import numpy as np
 from pathlib import Path
+import matplotlib.pyplot as plt
 from config import *
 # from nltk.tokenize import  sent_tokenize
 
@@ -147,8 +150,33 @@ def get_ocr_output(args):
             doc = DocumentFile.from_images(args.data)
 
         result = model(doc)
+        result.show(doc)
+
+        json_output = result.export()
 
         file = Path(args.data).stem
+
+        dest_dir = 'results/ocr_outs/'+file+'/'
+
+        if not (os.path.exists(dest_dir)):
+            os.makedirs(dest_dir)
+
+
+        synthetic_pages = result.synthesize()
+        count = 0
+        for page in synthetic_pages:
+            cv2.imwrite(dest_dir  + str(count) + '.jpg',page)
+            count +=1
+        # print(synthetic_pages)
+
+
+       
+
+        with open('results/int_ocr/' + file + '.json', 'w', encoding='utf-8') as f:
+            json.dump(json_output, f, ensure_ascii=False, indent=4)
+
+
+
 
         with open('results/int_ocr/' + file + '.pkl', 'wb') as outp:  # Overwrites any existing file.
             pickle.dump(result, outp, pickle.HIGHEST_PROTOCOL)
@@ -162,9 +190,14 @@ def get_ocr_output(args):
     data = []
     for page in result.pages:
         output = []
+        dim = tuple(reversed(page.dimensions))
         for block in page.blocks:
             for line in block.lines:
                 for word in line.words:
+                    geo = word.geometry
+                    a = list(a*b for a,b in zip(geo[0],dim))
+                    b = list(a*b for a,b in zip(geo[1],dim))
+                    # cv2.rectangle(image, (int(a[0]), int(a[1])), (int(b[0]), int(b[1])), (0, 0, 0),2)
                     value = word.value
                     output.append(value)
         output = " ".join(output)
