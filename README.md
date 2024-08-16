@@ -1,5 +1,7 @@
-# ocr-mt-tts
+# DocToSpeech [ocr-mt-tts]
 Project Work of Creation of efficient software system which reads documents and translates the languages 
+
+Project work done as part of CS772 Course
 
 
 ## ToDos :
